@@ -6314,7 +6314,7 @@ html[lang="en"] .core-card p{
 /*数字越小越上面*/
 @media (max-width:720px){
   .home-page .quest-board-zone.who-board-zone{
-    top:200px !important;
+    top:145px !important;
   }
 }
 
@@ -6350,7 +6350,14 @@ html[lang="en"] .core-card p{
 /* 手机端：把首页信箱往上移 */
 @media (max-width:720px){
   .home-mailbox{
-    top:180px !important;
+    top:200px !important;
   }
 }
 
+
+/* 手机端：让小屋显示在农田上层 */
+@media (max-width:720px){
+  .home-page .cottage-zone{
+    z-index:30 !important;
+  }
+}
