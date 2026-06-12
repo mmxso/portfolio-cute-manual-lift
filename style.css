@@ -6311,8 +6311,52 @@ html[lang="en"] .core-card p{
 
 /*手机端公告栏图标上移*/
 /* 手机端：把 Who am I 公告栏往上移 */
+/*数字越小越上面*/
 @media (max-width:720px){
   .home-page .quest-board-zone.who-board-zone{
     top:230px !important;
   }
 }
+
+
+/*手机端小屋图标上移*/
+/* 手机端：把首页小屋往上移 */
+@media (max-width:720px){
+  .home-page .cottage-zone{
+    top:80px !important;
+  }
+}
+
+
+/*手机端农田图标上移*/
+/* 手机端：把首页农田往上移 */
+@media (max-width:720px){
+  .home-page .field-zone{
+    top:290px !important;
+  }
+}
+
+
+/* 手机端：把首页工作棚往上移 */
+@media (max-width:720px){
+  .home-page .shed-zone{
+    bottom:170px !important;
+  }
+}
+
+
+/* 手机端：把首页兔兔往上移 */
+@media (max-width:720px){
+  .home-bunny{
+    top:284px !important;
+  }
+}
+
+
+/* 手机端：把首页信箱往上移 */
+@media (max-width:720px){
+  .home-mailbox{
+    top:276px !important;
+  }
+}
+
