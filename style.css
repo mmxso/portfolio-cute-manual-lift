@@ -6350,7 +6350,7 @@ html[lang="en"] .core-card p{
 /* 手机端：把首页信箱往上移 */
 @media (max-width:720px){
   .home-mailbox{
-    top:200px !important;
+    top:180px !important;
   }
 }
 
