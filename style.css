@@ -6314,7 +6314,7 @@ html[lang="en"] .core-card p{
 /*数字越小越上面*/
 @media (max-width:720px){
   .home-page .quest-board-zone.who-board-zone{
-    top:230px !important;
+    top:200px !important;
   }
 }
 
@@ -6328,13 +6328,7 @@ html[lang="en"] .core-card p{
 }
 
 
-/*手机端农田图标上移*/
-/* 手机端：把首页农田往上移 */
-@media (max-width:720px){
-  .home-page .field-zone{
-    top:230px !important;
-  }
-}
+
 
 
 /* 手机端：把首页工作棚往上移 */
@@ -6348,7 +6342,7 @@ html[lang="en"] .core-card p{
 /* 手机端：把首页兔兔往上移 */
 @media (max-width:720px){
   .home-bunny{
-    top:284px !important;
+    top:260px !important;
   }
 }
 
