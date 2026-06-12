@@ -567,6 +567,11 @@
 
   window.setPortfolioLanguage(localStorage.getItem('portfolioLanguage') || 'zh');
 })();
+
+document.querySelector('.home-mailbox').addEventListener('click', function(){
+  this.querySelector('.mailbox-menu').classList.toggle('visible');
+});
+
 </script>
 
 </body>

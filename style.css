@@ -6323,7 +6323,7 @@ html[lang="en"] .core-card p{
 /* 手机端：把首页小屋往上移 */
 @media (max-width:720px){
   .home-page .cottage-zone{
-    top:78px !important;
+    top:65px !important;
   }
 }
 
@@ -6381,3 +6381,13 @@ html[lang="en"] .core-card p{
     z-index:40 !important;
   }
 }
+
+
+.mailbox-menu{
+  display:none;
+  position:absolute;
+}
+.mailbox-menu.visible{
+  display:block;
+}
+
