@@ -6361,3 +6361,23 @@ html[lang="en"] .core-card p{
     z-index:30 !important;
   }
 }
+
+
+/* 手机端：首页图层顺序微调 */
+@media (max-width:720px){
+  .home-page .field-zone{
+    z-index:14 !important;
+  }
+
+  .home-page .cottage-zone{
+    z-index:30 !important;
+  }
+
+  .home-page .quest-board-zone.who-board-zone{
+    z-index:35 !important;
+  }
+
+  .home-mailbox{
+    z-index:40 !important;
+  }
+}
