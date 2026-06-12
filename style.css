@@ -6312,9 +6312,10 @@ html[lang="en"] .core-card p{
 /*手机端公告栏图标上移*/
 /* 手机端：把 Who am I 公告栏往上移 */
 /*数字越小越上面*/
+
 @media (max-width:720px){
   .home-page .quest-board-zone.who-board-zone{
-    top:100px !important;
+    top:60px !important;
   }
 }
 
