@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGS 实验室流程仿真项目 · Xiaomin's Portfolio</title>
+  <meta name="description" content="NGS 实验室流程仿真项目，动森风格作品集页面。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800;900;1000&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="forest-case-page ngs-case-page">
+  <main class="forest-case-main" id="top">
+    <a class="cartoon-back" href="project-farm.html" aria-label="Back to project field"><span>←</span></a>
+
+    <div class="page-board project-board forest-page-board">
+      <span data-i18n="board.title">NGS Lab</span>
+    </div>
+
+    <div class="case-lang-toggle" aria-label="Language switcher">
+      <button class="case-lang-btn active" type="button" data-lang="zh" data-i18n-site="lang.zh">中文</button>
+      <button class="case-lang-btn" type="button" data-lang="en" data-i18n-site="lang.en">EN</button>
+    </div>
+
+    <section class="forest-hero ngs-hero">
+      <div class="forest-hero-copy">
+        <p class="farm-eyebrow" data-i18n="hero.eyebrow">医疗运营 · 仿真建模项目</p>
+        <h1 data-i18n="hero.title">NGS 实验室流程仿真项目</h1>
+        <p class="forest-subtitle" data-i18n="hero.subtitle">使用离散事件模拟识别流程瓶颈，并优化样本周转时间。</p>
+        <p class="forest-text" data-i18n="hero.text">这个项目围绕下一代测序实验室的样本处理流程展开，通过构建仿真模型、评估系统表现，并测试不同运营优化方案，帮助实验室实现更快、更均衡的样本处理。</p>
+        <div class="forest-actions">
+          <a class="farm-btn primary" href="#results" data-i18n="buttons.viewResults">查看结果</a>
+          <a class="farm-btn" href="project-farm.html" data-i18n="buttons.backField">返回项目农田</a>
+        </div>
+      </div>
+
+      <aside class="lab-cottage-card" aria-label="NGS workflow visual">
+        <div class="lab-roof"></div>
+        <div class="lab-workflow">
+          <div class="lab-node" data-i18n="workflow.book">样本登记</div>
+          <div class="lab-node" data-i18n="workflow.prepare">样本准备</div>
+          <div class="lab-node warning" data-i18n="workflow.load">批量上机</div>
+          <div class="lab-node strong" data-i18n="workflow.seq">测序仪</div>
+          <div class="lab-node" data-i18n="workflow.analysis">分析</div>
+          <div class="lab-node warning" data-i18n="workflow.rework">返工</div>
+          <div class="lab-node strong" data-i18n="workflow.report">报告</div>
+        </div>
+        <div class="forest-kpis">
+          <div><strong>Simul8</strong><span data-i18n="hero.kpi1">仿真模型</span></div>
+          <div><strong>R</strong><span data-i18n="hero.kpi2">数据分析</span></div>
+          <div><strong>DES</strong><span data-i18n="hero.kpi3">流程优化</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="forest-section" id="overview">
+      <div class="forest-section-title">
+        <span class="cat-icon-sign">🧪</span>
+        <div><p class="farm-eyebrow" data-i18n="section.overview">Project Overview</p><h2 data-i18n="overview.title"></h2></div>
+      </div>
+      <div class="forest-paper-card">
+        <p data-i18n="overview.text"></p>
+        <ul class="leaf-list">
+          <li data-i18n="overview.li1"></li>
+          <li data-i18n="overview.li2"></li>
+          <li data-i18n="overview.li3"></li>
+          <li data-i18n="overview.li4"></li>
+        </ul>
+        <div class="cat-tags">
+          <span>Simul8</span><span>R</span><span>Discrete Event Simulation</span><span>Healthcare Operations</span><span>Process Optimisation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="forest-section" id="process">
+      <div class="forest-section-title">
+        <span class="cat-icon-sign">🧭</span>
+        <div><p class="farm-eyebrow" data-i18n="section.workflow">Workflow Model</p><h2 data-i18n="process.title"></h2><p class="forest-section-desc" data-i18n="process.desc"></p></div>
+      </div>
+      <div class="ngs-process-card">
+        <div class="ngs-step"><strong>Book-in</strong><span>BMS</span></div>
+        <div class="ngs-step"><strong>Preparation</strong><span>BMS</span></div>
+        <div class="ngs-step"><strong>Loading</strong><span>Batch queue</span></div>
+        <div class="ngs-step strong"><strong>Sequencer</strong><span>Batch of 32</span></div>
+        <div class="ngs-step"><strong>Analysis</strong><span>FS</span></div>
+        <div class="ngs-step rework"><strong>Rework</strong><span>7% failure loop</span></div>
+        <div class="ngs-step strong"><strong>Reporting</strong><span>FS</span></div>
+      </div>
+    </section>
+
+    <section class="forest-section" id="results">
+      <div class="forest-section-title">
+        <span class="cat-icon-sign">📊</span>
+        <div><p class="farm-eyebrow" data-i18n="section.results">Key Results</p><h2 data-i18n="results.title"></h2><p class="forest-section-desc" data-i18n="results.desc"></p></div>
+      </div>
+      <div class="ngs-kpi-grid">
+        <article class="ngs-kpi"><span data-i18n="results.kpi1.label"></span><strong>2618 → 1590</strong><p data-i18n="results.kpi1.note"></p></article>
+        <article class="ngs-kpi"><span data-i18n="results.kpi2.label"></span><strong>80.7% → 98.0%</strong><p data-i18n="results.kpi2.note"></p></article>
+        <article class="ngs-kpi"><span data-i18n="results.kpi3.label"></span><strong>85% → 79%</strong><p data-i18n="results.kpi3.note"></p></article>
+        <article class="ngs-kpi"><span data-i18n="results.kpi4.label"></span><strong>Load · Report</strong><p data-i18n="results.kpi4.note"></p></article>
+      </div>
+    </section>
+
+    <section class="forest-section" id="scenarios">
+      <div class="forest-section-title">
+        <span class="cat-icon-sign">📝</span>
+        <div><p class="farm-eyebrow" data-i18n="section.scenarios">Scenario Analysis</p><h2 data-i18n="scenario.title"></h2><p class="forest-section-desc" data-i18n="scenario.desc"></p></div>
+      </div>
+      <div class="forest-card-grid three">
+        <article class="forest-mini-card"><h3 data-i18n="scenario.s1.title"></h3><p data-i18n="scenario.s1.text"></p></article>
+        <article class="forest-mini-card"><h3 data-i18n="scenario.s2.title"></h3><p data-i18n="scenario.s2.text"></p></article>
+        <article class="forest-mini-card"><h3 data-i18n="scenario.s3.title"></h3><p data-i18n="scenario.s3.text"></p></article>
+      </div>
+    </section>
+
+    <section class="forest-section" id="reflection">
+      <div class="cat-reflection-card">
+        <p class="farm-eyebrow" data-i18n="section.reflection">Reflection</p>
+        <h2 data-i18n="reflection.title"></h2>
+        <p data-i18n="reflection.text"></p>
+      </div>
+      <div class="forest-actions bottom-actions">
+        <a class="farm-btn primary" href="project-farm.html" data-i18n="buttons.backField">返回项目农田</a>
+        <a class="farm-btn" href="index.html" data-i18n="buttons.backHome">返回首页农场</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const translations = {
+      "en": {
+            "nav.about": "About",
+            "nav.projects": "Projects",
+            "nav.skills": "Skills",
+            "nav.contact": "Contact",
+            "hero.eyebrow": "Healthcare Operations · Simulation Project",
+            "hero.title": "NGS Laboratory Workflow Simulation",
+            "hero.subtitle": "Using discrete event simulation to identify bottlenecks and improve turnaround time.",
+            "hero.text": "This project modelled a next-generation sequencing laboratory workflow, evaluated system performance, and tested operational improvement scenarios to support faster and more balanced sample processing.",
+            "hero.kpi1": "Simulation model",
+            "hero.kpi2": "Data analysis",
+            "hero.kpi3": "Process optimisation",
+            "buttons.viewResults": "View Results",
+            "buttons.back": "Back to Projects",
+            "overview.title": "Project Overview",
+            "overview.text": "The laboratory was experiencing longer turnaround times after taking on additional sample demand from another hospital trust. The key challenge was to understand where delays were building up and how the workflow could be improved without relying heavily on new resources.",
+            "overview.li1": "Built a discrete event simulation model for the end-to-end NGS testing pathway.",
+            "overview.li2": "Used historical LIMS data and client clarification to model process timings, resources and rework loops.",
+            "overview.li3": "Evaluated bottlenecks through turnaround time, queueing time and staff utilisation.",
+            "overview.li4": "Tested practical improvement scenarios including batch size changes and task reallocation.",
+            "process.title": "Workflow Model",
+            "process.desc": "The model captured the core pathway from sample booking to reporting, including batch sequencing and rework after failed analysis.",
+            "results.title": "Key Results",
+            "results.desc": "The simulation identified workload pressure on the senior scientist and long queues around loading, analysis and reporting.",
+            "results.kpi1.label": "Average TaT",
+            "results.kpi1.note": "minutes under the best scenario",
+            "results.kpi2.label": "Within Target",
+            "results.kpi2.note": "after reducing batch size",
+            "results.kpi3.label": "FS Utilisation",
+            "results.kpi3.note": "when rework was reassigned",
+            "results.kpi4.label": "Main Bottlenecks",
+            "results.kpi4.note": "longest queues in base model",
+            "scenario.title": "Scenario Analysis",
+            "scenario.desc": "Several operational changes were tested to compare their impact on turnaround time, queues and staff workload.",
+            "scenario.s1.title": "Reduce Batch Size",
+            "scenario.s1.text": "<strong>Batch 32 → 16</strong> produced the strongest improvement, reducing average TaT and increasing the percentage of samples completed within target.",
+            "scenario.s2.title": "Reassign Rework",
+            "scenario.s2.text": "Allowing BMS to support rework reduced FS workload and helped relieve rework queue pressure.",
+            "scenario.s3.title": "Extend FS Hours",
+            "scenario.s3.text": "Extending FS availability gave moderate improvement, but was less effective than batch size adjustment.",
+            "table.title": "Performance Comparison",
+            "table.desc": "A simplified comparison of key scenarios from the simulation results.",
+            "reflection.title": "What I Learned",
+            "reflection.text": "This project helped me connect data analysis with real operational decision-making. Instead of only reporting numbers, I learned how to translate process data, stakeholder constraints and simulation outputs into practical recommendations that a healthcare team could understand and consider.",
+            "footer.text": "Portfolio website in progress.",
+            "board.title": "NGS Lab",
+            "buttons.backField": "Back to Project Field",
+            "buttons.backHome": "Back to Farm Home",
+            "workflow.book": "Book-in",
+            "workflow.prepare": "Preparation",
+            "workflow.load": "Loading",
+            "workflow.seq": "Sequencer",
+            "workflow.analysis": "Analysis",
+            "workflow.rework": "Rework",
+            "workflow.report": "Reporting",
+            "section.overview": "Project Overview",
+            "section.workflow": "Workflow Model",
+            "section.results": "Key Results",
+            "section.scenarios": "Scenario Analysis",
+            "section.reflection": "Reflection"
+      },
+      "zh": {
+            "nav.about": "关于我",
+            "nav.projects": "作品集",
+            "nav.skills": "技能",
+            "nav.contact": "联系我",
+            "hero.eyebrow": "医疗运营 · 仿真建模项目",
+            "hero.title": "NGS 实验室流程仿真项目",
+            "hero.subtitle": "使用离散事件模拟识别流程瓶颈，并优化样本周转时间。",
+            "hero.text": "这个项目围绕下一代测序实验室的样本处理流程展开，通过构建仿真模型、评估系统表现，并测试不同运营优化方案，帮助实验室实现更快、更均衡的样本处理。",
+            "hero.kpi1": "仿真模型",
+            "hero.kpi2": "数据分析",
+            "hero.kpi3": "流程优化",
+            "buttons.viewResults": "查看结果",
+            "buttons.back": "返回作品集",
+            "overview.title": "项目概览",
+            "overview.text": "该实验室在承接另一家医院的额外样本需求后，样本周转时间逐渐变长。项目的核心挑战是理解延迟积累在哪些环节，并在不大量依赖新增资源的情况下探索可执行的流程优化方案。",
+            "overview.li1": "构建覆盖 NGS 测试全流程的离散事件模拟模型。",
+            "overview.li2": "结合历史 LIMS 数据和客户沟通信息，建模各阶段处理时间、资源限制和返工循环。",
+            "overview.li3": "通过周转时间、队列时间和员工利用率评估流程瓶颈。",
+            "overview.li4": "测试批量大小调整、任务重新分配等可落地优化方案。",
+            "process.title": "流程模型",
+            "process.desc": "模型覆盖从样本录入到结果报告的核心流程，并纳入批量测序和分析失败后的返工循环。",
+            "results.title": "关键结果",
+            "results.desc": "仿真结果显示，高级科学家工作负荷较高，装载、分析和报告环节存在明显队列延迟。",
+            "results.kpi1.label": "平均周转时间",
+            "results.kpi1.note": "最佳方案下的分钟数变化",
+            "results.kpi2.label": "目标内完成率",
+            "results.kpi2.note": "缩小批量后的提升",
+            "results.kpi3.label": "FS 利用率",
+            "results.kpi3.note": "返工任务重新分配后",
+            "results.kpi4.label": "主要瓶颈",
+            "results.kpi4.note": "基础模型中最长等待环节",
+            "scenario.title": "情景分析",
+            "scenario.desc": "项目测试了多个运营调整方案，比较它们对周转时间、队列和员工工作负荷的影响。",
+            "scenario.s1.title": "缩小批量大小",
+            "scenario.s1.text": "<strong>批量 32 → 16</strong> 带来了最明显改善，降低平均周转时间，并提高目标时间内完成比例。",
+            "scenario.s2.title": "重新分配返工任务",
+            "scenario.s2.text": "让 BMS 支持返工任务可以减轻 FS 工作负荷，并明显缓解返工队列压力。",
+            "scenario.s3.title": "延长 FS 工作时间",
+            "scenario.s3.text": "延长 FS 可用时间带来一定改善，但效果不如缩小批量大小明显。",
+            "table.title": "方案表现对比",
+            "table.desc": "下表简化展示了几个关键情景的模拟结果。",
+            "reflection.title": "项目收获",
+            "reflection.text": "这个项目让我把数据分析和真实运营决策联系起来。我学到的不只是呈现数据结果，而是如何把流程数据、利益相关者限制和仿真输出转化为医疗团队能够理解和考虑的实际建议。",
+            "footer.text": "个人作品集网站持续更新中。",
+            "board.title": "NGS Lab",
+            "buttons.backField": "返回项目农田",
+            "buttons.backHome": "返回首页农场",
+            "workflow.book": "样本登记",
+            "workflow.prepare": "样本准备",
+            "workflow.load": "批量上机",
+            "workflow.seq": "测序仪",
+            "workflow.analysis": "分析",
+            "workflow.rework": "返工",
+            "workflow.report": "报告",
+            "section.overview": "Project Overview",
+            "section.workflow": "Workflow Model",
+            "section.results": "Key Results",
+            "section.scenarios": "Scenario Analysis",
+            "section.reflection": "Reflection"
+      }
+};
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+      localStorage.setItem("portfolioLanguage", lang);
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          element.innerHTML = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll(".case-lang-btn").forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === lang);
+      });
+    }
+
+    document.querySelectorAll(".case-lang-btn").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem("portfolioLanguage") || "zh");
+  </script>
+
+
+<script>
+(function () {
+  const siteTranslations = {
+  "zh": {
+    "lang.zh": "中文",
+    "lang.en": "EN",
+    "home.welcome.p": "Welcome to",
+    "home.welcome.h1": "Xiaomin's Portfolio",
+    "home.cottage.hover": "进入小屋 · About Me",
+    "home.mailbox.hover": "Contact Mailbox",
+    "home.resume": "📄 下载简历",
+    "home.email": "✉️ 给我发邮件",
+    "home.bunny.greeting": "Hi, I'm Xiaomin",
+    "home.who.hover.title": "Who am I",
+    "home.who.hover.text": "Quick intro about Xiaomin",
+    "home.who.board.title": "Who am I",
+    "home.who.board.sub": "Notice Board",
+    "home.field.title": "Project Fields",
+    "home.field.hover": "Enter Project Fields",
+    "home.shed.title": "Skills Shed",
+    "home.shed.hover.title": "Skills & Tools",
+    "home.shed.hover.text": "Data · Research · AI · Design · Operations · Communication",
+    "home.mapHint.1": "🖱️ 点击小屋门进入 About Me",
+    "home.mapHint.2": "🌱 点击农田查看项目胡萝卜",
+    "home.mapHint.3": "🧰 点击工具棚查看技能与工具",
+    "home.who.title": "💻 我是谁 / Who I Am",
+    "home.who.p1": "我是 Xiaomin，拥有 Finance 与 Business Analytics 的学习背景。我对数据洞察、用户需求、AI工具、品牌表达和网页设计很感兴趣。我喜欢把复杂的信息整理成清晰、有逻辑、也有视觉记忆点的内容。",
+    "home.who.p2": "I enjoy using AI as a creative and analytical partner: from breaking down business problems, generating visual directions, structuring portfolio pages, to turning ideas into clean HTML/CSS outputs.",
+    "home.tag.ba": "Business Analytics",
+    "home.tag.ai": "AI-assisted Design",
+    "home.tag.user": "User Insight",
+    "home.tag.story": "Data Storytelling",
+    "about.entering": "Entering the cottage...",
+    "about.board": "About Me",
+    "about.bookshelf.hover": "Hover / Click Core Strengths",
+    "about.sticky.title": "Notes",
+    "about.click.frame": "Click the frame",
+    "about.click.computer": "Click the computer",
+    "about.screen": "Hello!",
+    "about.hint1": "💻 点击电脑：查看个人介绍",
+    "about.hint2": "🖼️ 点击毕业照：查看毕业服兔兔",
+    "about.popup.title": "💻 我的个人介绍",
+    "about.step1.title": "背景经历",
+    "about.step1.text": "我拥有金融与商业分析的学习背景，对数据、商业洞察、用户需求和新兴技术都很感兴趣。过去几年在英国的学习经历，让我逐渐形成了更开放的视角，也更习惯从不同文化和行业中观察问题。",
+    "about.step2.title": "我的工作方式",
+    "about.step2.text": "我喜欢把复杂的信息整理成清晰的结构，也享受从一个想法出发，把它变成可落地的方案。无论是做商业分析、品牌页面、AI 应用案例，还是研究一个新的行业，我都希望自己是真的理解背后的逻辑和价值。",
+    "about.step3.title": "兴趣与观察",
+    "about.step3.text": "在生活中，我喜欢旅行、阅读和拼图，也持续关注动漫、网文和内容行业。这些兴趣让我保持好奇心，也训练我观察人与故事、产品和市场之间关系的能力。",
+    "about.core.title": "📚 核心优势 / Core Strengths",
+    "about.core1.title": "商业分析",
+    "about.core1.text": "能够将商业问题拆解为结构化分析，并形成清晰的建议。",
+    "about.core2.title": "AI 应用",
+    "about.core2.text": "长期使用 AI 工具进行创意构思、文案写作和视觉方向。",
+    "about.core3.title": "用户洞察",
+    "about.core3.text": "关注用户在真实服务场景中如何感知信任、共情、清晰度和价值。",
+    "about.core4.title": "沟通表达",
+    "about.core4.text": "能够把复杂概念转化为清楚、友好、有视觉叙事感的内容。",
+    "about.grad.title": "🎓 Graduation Bunny",
+    "about.grad.caption": "这张毕业照延续了网站里兔兔主角的风格，并把 University of Bristol 和 The University of Manchester 放进了同一个温暖的校园场景里。",
+    "skills.board": "Skills",
+    "skills.eyebrow": "Tool Shed · Skills & Tools",
+    "skills.title": "技能与工具",
+    "skills.lead": "这个页面像一个动森感工具棚：每一组技能都是一件工具，代表我在分析、研究、AI创作、内容设计、商业运营和沟通表达中的能力。",
+    "skills.data.title": "数据分析",
+    "skills.data.1": "R, Python, Excel, Microsoft Office",
+    "skills.data.2": "Regression Analysis",
+    "skills.data.3": "Marketing Analytics",
+    "skills.research.title": "研究能力",
+    "skills.research.1": "Qualitative Interviews",
+    "skills.research.2": "Thematic Analysis",
+    "skills.research.3": "User Insight",
+    "skills.research.4": "Market Research",
+    "skills.ai.title": "AI 与创作",
+    "skills.ai.1": "ChatGPT",
+    "skills.ai.2": "AI-assisted Writing",
+    "skills.ai.3": "AI Image Editing",
+    "skills.ai.4": "AI Website Generation",
+    "skills.design.title": "内容与设计",
+    "skills.design.1": "Canva",
+    "skills.design.2": "PowerPoint",
+    "skills.design.3": "Website Layout",
+    "skills.business.title": "商业与运营",
+    "skills.business.1": "Supplier Communication",
+    "skills.business.2": "Marketing Analysis",
+    "skills.business.3": "Operations Awareness",
+    "skills.comm.title": "沟通表达",
+    "skills.comm.1": "Writing Skills",
+    "skills.comm.2": "Project Storytelling",
+    "skills.comm.3": "Presentation Design",
+    "skills.comm.4": "Cross-cultural Communication",
+    "skills.note.title": "How I use these tools",
+    "skills.note.text": "我更关注工具背后的应用场景：用数据理解问题，用研究发现需求，用 AI 提高表达效率，再用设计和沟通把复杂内容变成清晰、可展示、可落地的作品。",
+    "pf.board": "Project Fields",
+    "pf.sign.p": "Pick a carrot",
+    "pf.sign.h1": "Each carrot grows one project",
+    "pf.project.1.title": "猫主粮品类视觉策略设计项目",
+    "pf.project.1.desc": "将价格带、目标人群、购买痛点和卖点优先级转化为 AI 辅助视觉方案。",
+    "pf.project.2.title": "Healthcare AI Response Research",
+    "pf.project.2.desc": "毕业论文项目：比较人工回复与 ChatGPT 回复在医疗差评中的感知差异。",
+    "pf.project.3.title": "简谟生物品牌矩阵与宠物食品市场竞争分析项目",
+    "pf.project.3.desc": "拆解简谟生物多品牌矩阵、诚实一口主品牌定位、竞品格局与信任风险。",
+    "pf.project.4.title": "NGS 实验室流程仿真项目",
+    "pf.project.4.desc": "使用离散事件仿真分析 NGS 实验室流程瓶颈，并测试周转时间优化方案。",
+    "pf.corner": "<strong>Hover</strong> 看简介 · <strong>Click</strong> 进入详情页",
+    "health.board": "Project",
+    "health.kicker": "Xiaomin's Project Carrot",
+    "health.title": "Healthcare AI Response Research",
+    "health.subtitle": "围绕医疗差评回复展开的毕业论文项目，比较人工回复与 ChatGPT 回复在同一场景下的用户感知差异。",
+    "health.brief.title": "Project Brief",
+    "health.brief": "项目研究英国医疗服务场景下，消费者如何看待人工撰写与 ChatGPT 生成的负面评论管理回复。研究关注共情、语气、可信度、语言线索和 AI 接受度。",
+    "health.role.title": "My Role",
+    "health.role": "我设计访谈问题、整理场景材料、进行半结构化访谈，并通过主题分析提炼关键发现。",
+    "health.output.title": "Final Output",
+    "health.output": "毕业论文研究框架、访谈分析、主题发现和对医疗服务回复策略的建议。",
+    "health.process.title": "Process",
+    "health.process.1": "确定医疗负面评论与管理回复的研究场景。",
+    "health.process.2": "设计人工回复与 AI 回复的盲测比较。",
+    "health.process.3": "围绕 empathy、tone、credibility、preference 进行编码。",
+    "health.process.4": "总结用户对 AI 辅助回复的接受条件。",
+    "health.insights.title": "Key Insights",
+    "health.insights.1": "AI 回复常被认为更温暖，但也容易被质疑模板化。",
+    "health.insights.2": "人工回复如果解释清楚原因和行动，会带来更强可信度。",
+    "health.insights.3": "医疗服务场景中，AI 更适合作为草稿工具，需要人工审核。",
+    "health.reflection.title": "Reflection",
+    "health.reflection": "这个项目体现了我将 AI 议题、用户感知和服务管理结合起来分析的能力，也展示了我对定性研究和用户洞察的兴趣。",
+    "health.back.field": "Back to Project Field",
+    "health.back.home": "Back to Farm Home"
+  },
+  "en": {
+    "lang.zh": "中文",
+    "lang.en": "EN",
+    "home.welcome.p": "Welcome to",
+    "home.welcome.h1": "Xiaomin's Portfolio",
+    "home.cottage.hover": "Enter the cottage · About Me",
+    "home.mailbox.hover": "Contact Mailbox",
+    "home.resume": "📄 Download Resume",
+    "home.email": "✉️ Email Me",
+    "home.bunny.greeting": "Hi, I'm Xiaomin",
+    "home.who.hover.title": "Who am I",
+    "home.who.hover.text": "Quick intro about Xiaomin",
+    "home.who.board.title": "Who am I",
+    "home.who.board.sub": "Notice Board",
+    "home.field.title": "Project Fields",
+    "home.field.hover": "Enter Project Fields",
+    "home.shed.title": "Skills Shed",
+    "home.shed.hover.title": "Skills & Tools",
+    "home.shed.hover.text": "Data · Research · AI · Design · Operations · Communication",
+    "home.mapHint.1": "🖱️ Click the cottage door to enter About Me",
+    "home.mapHint.2": "🌱 Click the field to view project carrots",
+    "home.mapHint.3": "🧰 Click the shed to view skills & tools",
+    "home.who.title": "💻 Who I Am",
+    "home.who.p1": "I am Xiaomin, with an academic background in Finance and Business Analytics. I am interested in data insight, user needs, AI tools, brand expression and web design. I enjoy turning complex information into clear, logical and visually memorable content.",
+    "home.who.p2": "I enjoy using AI as a creative and analytical partner: from breaking down business problems, generating visual directions, structuring portfolio pages, to turning ideas into clean HTML/CSS outputs.",
+    "home.tag.ba": "Business Analytics",
+    "home.tag.ai": "AI-assisted Design",
+    "home.tag.user": "User Insight",
+    "home.tag.story": "Data Storytelling",
+    "about.entering": "Entering the cottage...",
+    "about.board": "About Me",
+    "about.bookshelf.hover": "Hover / Click Core Strengths",
+    "about.sticky.title": "Notes",
+    "about.click.frame": "Click the frame",
+    "about.click.computer": "Click the computer",
+    "about.screen": "Hello!",
+    "about.hint1": "💻 Click the computer: personal introduction",
+    "about.hint2": "🖼️ Click the graduation photo: graduation bunny",
+    "about.popup.title": "💻 Personal Introduction",
+    "about.step1.title": "Background",
+    "about.step1.text": "I have a background in Finance and Business Analytics, and I am interested in data, business insight, user needs and emerging technologies. My years of study in the UK helped me develop a more open perspective and become more used to observing problems across different cultures and industries.",
+    "about.step2.title": "How I Work",
+    "about.step2.text": "I like organizing complex information into clear structures, and I enjoy turning an idea into a practical solution. Whether I am working on business analysis, brand pages, AI application cases or researching a new industry, I want to truly understand the logic and value behind it.",
+    "about.step3.title": "Interests & Observation",
+    "about.step3.text": "In daily life, I enjoy travelling, reading and puzzles, and I also follow anime, web novels and content industries. These interests keep me curious and train my ability to observe relationships between people, stories, products and markets.",
+    "about.core.title": "📚 Core Strengths",
+    "about.core1.title": "Business Analysis",
+    "about.core1.text": "Able to break business problems into structured analysis and clear recommendations.",
+    "about.core2.title": "AI Application",
+    "about.core2.text": "Long-term use of AI tools for creative thinking, copywriting and visual direction.",
+    "about.core3.title": "User Insight",
+    "about.core3.text": "Focused on how users perceive trust, empathy, clarity and value in real service scenarios.",
+    "about.core4.title": "Communication",
+    "about.core4.text": "Able to turn complex concepts into clear, friendly and visually narrative content.",
+    "about.grad.title": "🎓 Graduation Bunny",
+    "about.grad.caption": "This graduation photo keeps the same bunny character style as the website and places both the University of Bristol and The University of Manchester in one warm campus scene.",
+    "skills.board": "Skills",
+    "skills.eyebrow": "Tool Shed · Skills & Tools",
+    "skills.title": "Skills & Tools",
+    "skills.lead": "This page works like a cozy tool shed: each skill group is a tool that represents my abilities in analysis, research, AI creation, content design, business operations and communication.",
+    "skills.data.title": "Data Analysis",
+    "skills.data.1": "R, Python, Excel, Microsoft Office",
+    "skills.data.2": "Regression Analysis",
+    "skills.data.3": "Marketing Analytics",
+    "skills.research.title": "Research Skills",
+    "skills.research.1": "Qualitative Interviews",
+    "skills.research.2": "Thematic Analysis",
+    "skills.research.3": "User Insight",
+    "skills.research.4": "Market Research",
+    "skills.ai.title": "AI & Creation",
+    "skills.ai.1": "ChatGPT",
+    "skills.ai.2": "AI-assisted Writing",
+    "skills.ai.3": "AI Image Editing",
+    "skills.ai.4": "AI Website Generation",
+    "skills.design.title": "Content & Design",
+    "skills.design.1": "Canva",
+    "skills.design.2": "PowerPoint",
+    "skills.design.3": "Website Layout",
+    "skills.business.title": "Business & Operations",
+    "skills.business.1": "Supplier Communication",
+    "skills.business.2": "Marketing Analysis",
+    "skills.business.3": "Operations Awareness",
+    "skills.comm.title": "Communication",
+    "skills.comm.1": "Writing Skills",
+    "skills.comm.2": "Project Storytelling",
+    "skills.comm.3": "Presentation Design",
+    "skills.comm.4": "Cross-cultural Communication",
+    "skills.note.title": "How I use these tools",
+    "skills.note.text": "I care more about how tools are used in real scenarios: using data to understand problems, research to discover needs, AI to improve expression efficiency, and design plus communication to turn complex content into clear, presentable and practical work.",
+    "pf.board": "Project Fields",
+    "pf.sign.p": "Pick a carrot",
+    "pf.sign.h1": "Each carrot grows one project",
+    "pf.project.1.title": "Cat Food Visual Strategy",
+    "pf.project.1.desc": "Translating price tiers, target users, purchase concerns and selling-point priorities into AI-assisted visual concepts.",
+    "pf.project.2.title": "Healthcare AI Response Research",
+    "pf.project.2.desc": "A dissertation project comparing human-written and ChatGPT-generated responses to negative healthcare reviews.",
+    "pf.project.3.title": "Jianmo Bio Brand Matrix & Pet Food Market Analysis",
+    "pf.project.3.desc": "Analyzing Jianmo Bio’s multi-brand portfolio, Honest Bite’s core positioning, competitors and trust risks.",
+    "pf.project.4.title": "NGS Laboratory Workflow Simulation",
+    "pf.project.4.desc": "Using discrete-event simulation to identify bottlenecks in an NGS laboratory workflow and test turnaround-time improvements.",
+    "pf.corner": "<strong>Hover</strong> for preview · <strong>Click</strong> for details",
+    "health.board": "Project",
+    "health.kicker": "Xiaomin's Project Carrot",
+    "health.title": "Healthcare AI Response Research",
+    "health.subtitle": "A dissertation project comparing how people perceive human-written and ChatGPT-generated responses to negative healthcare reviews.",
+    "health.brief.title": "Project Brief",
+    "health.brief": "This project studies how consumers perceive human-written and ChatGPT-generated managerial responses to negative online reviews in UK healthcare. It focuses on empathy, tone, credibility, language cues and acceptance of AI use.",
+    "health.role.title": "My Role",
+    "health.role": "I designed interview questions, prepared response scenarios, conducted semi-structured interviews and used thematic analysis to develop key findings.",
+    "health.output.title": "Final Output",
+    "health.output": "A dissertation research framework, interview analysis, thematic findings and practical recommendations for healthcare service recovery responses.",
+    "health.process.title": "Process",
+    "health.process.1": "Defined the healthcare negative-review and managerial-response scenario.",
+    "health.process.2": "Designed a blind comparison between human-written and AI-generated responses.",
+    "health.process.3": "Coded themes around empathy, tone, credibility and preference.",
+    "health.process.4": "Summarized the conditions under which users accept AI-assisted responses.",
+    "health.insights.title": "Key Insights",
+    "health.insights.1": "AI responses were often perceived as warmer, but could also feel templated.",
+    "health.insights.2": "Human responses gained credibility when they explained reasons and concrete actions clearly.",
+    "health.insights.3": "In healthcare service recovery, AI is more suitable as a drafting tool with human review.",
+    "health.reflection.title": "Reflection",
+    "health.reflection": "This project demonstrates my ability to connect AI, user perception and service management, while also showing my interest in qualitative research and user insight.",
+    "health.back.field": "Back to Project Field",
+    "health.back.home": "Back to Farm Home"
+  }
+};
+
+  function translateByAttr(selector, lang, dictionary) {
+    if (!dictionary || !dictionary[lang]) return;
+    document.querySelectorAll(selector).forEach((el) => {
+      const key = el.getAttribute(selector.slice(1, -1).split('=')[0]);
+      if (key && Object.prototype.hasOwnProperty.call(dictionary[lang], key)) {
+        el.innerHTML = dictionary[lang][key];
+      }
+    });
+  }
+
+  function setActiveButtons(lang) {
+    document.querySelectorAll('.global-lang-btn, .cat-lang-btn, .case-lang-btn').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  window.setPortfolioLanguage = function(lang) {
+    lang = lang === 'en' ? 'en' : 'zh';
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    localStorage.setItem('portfolioLanguage', lang);
+
+    // 1) Unified site-level translations added for all pages.
+    document.querySelectorAll('[data-i18n-site]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-site');
+      if (siteTranslations[lang] && siteTranslations[lang][key]) el.innerHTML = siteTranslations[lang][key];
+    });
+
+    // 2) Older global translations that already existed on earlier pages.
+    try {
+      if (typeof globalTranslations !== 'undefined' && globalTranslations[lang]) {
+        document.querySelectorAll('[data-i18n-global]').forEach((el) => {
+          const key = el.getAttribute('data-i18n-global');
+          if (globalTranslations[lang][key]) el.innerHTML = globalTranslations[lang][key];
+        });
+      }
+    } catch (e) {}
+
+    // 3) Existing project-page translations, e.g. cat food / Jianmo / NGS pages.
+    try {
+      if (typeof translations !== 'undefined' && translations[lang]) {
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) el.innerHTML = translations[lang][key];
+        });
+      }
+    } catch (e) {}
+
+    setActiveButtons(lang);
+  };
+
+  document.querySelectorAll('.global-lang-btn, .cat-lang-btn, .case-lang-btn').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.setPortfolioLanguage(btn.dataset.lang);
+    });
+  });
+
+  window.setPortfolioLanguage(localStorage.getItem('portfolioLanguage') || 'zh');
+})();
+</script>
+
+</body>
+</html>

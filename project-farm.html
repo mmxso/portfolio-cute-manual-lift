@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Fields · Xiaomin's Portfolio Farm</title>
+  <meta name="description" content="A zoomed-in cartoon project field with four interactive carrots." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800;900;1000&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="project-farm-page">
+  <div class="global-lang-toggle" aria-label="Language switcher">
+    <button class="global-lang-btn active" type="button" data-lang="zh" data-i18n-site="lang.zh">中文</button>
+    <button class="global-lang-btn" type="button" data-lang="en" data-i18n-site="lang.en">EN</button>
+  </div>
+
+  <main class="project-farm-main" id="project-field">
+    <a class="cartoon-back" href="index.html" aria-label="Back to farm map">
+      <span>←</span>
+    </a>
+
+    <div class="page-board project-board">
+      <span data-i18n-site="pf.board">Project Fields</span>
+    </div>
+
+    <section class="project-field-scene" aria-label="Zoomed-in project field">
+      <div class="field-sky">
+        <span class="field-sun"></span>
+        <span class="field-cloud cloud-a"></span>
+        <span class="field-cloud cloud-b"></span>
+      </div>
+
+      <div class="field-intro-sign">
+        <p data-i18n-site="pf.sign.p">Pick a carrot</p>
+        <h1 data-i18n-site="pf.sign.h1">Each carrot grows one project</h1>
+      </div>
+
+      <div class="big-field">
+        <span class="field-fence fence-top"></span>
+        <span class="field-fence fence-left"></span>
+        <span class="field-fence fence-right"></span>
+
+        <div class="field-grid">
+          <a class="carrot-plot plot-1" href="project-cat-food.html" aria-label="Open Cat Food Visual Strategy project">
+            <span class="soil-lines"></span>
+            <span class="carrot">
+              <i class="leaf leaf-1"></i>
+              <i class="leaf leaf-2"></i>
+              <i class="leaf leaf-3"></i>
+              <i class="root"></i>
+            </span>
+            <span class="plot-tag">Project 01</span>
+            <span class="carrot-preview">
+              <strong data-i18n-site="pf.project.1.title">猫主粮品类视觉策略设计项目</strong>
+              <em data-i18n-site="pf.project.1.desc">将价格带、目标人群、购买痛点和卖点优先级转化为 AI 辅助视觉方案。</em>
+            </span>
+          </a>
+
+          <a class="carrot-plot plot-2" href="project-healthcare.html" aria-label="Open Healthcare AI Response Research project">
+            <span class="soil-lines"></span>
+            <span class="carrot">
+              <i class="leaf leaf-1"></i>
+              <i class="leaf leaf-2"></i>
+              <i class="leaf leaf-3"></i>
+              <i class="root"></i>
+            </span>
+            <span class="plot-tag">Project 02</span>
+            <span class="carrot-preview">
+              <strong data-i18n-site="pf.project.2.title">Healthcare AI Response Research</strong>
+              <em data-i18n-site="pf.project.2.desc">毕业论文项目：比较人工回复与 ChatGPT 回复在医疗差评中的感知差异。</em>
+            </span>
+          </a>
+
+          <a class="carrot-plot plot-3" href="project-jianmo.html" aria-label="Open Jianmo Bio Brand Matrix and Pet Food Market Analysis project">
+            <span class="soil-lines"></span>
+            <span class="carrot">
+              <i class="leaf leaf-1"></i>
+              <i class="leaf leaf-2"></i>
+              <i class="leaf leaf-3"></i>
+              <i class="root"></i>
+            </span>
+            <span class="plot-tag">Project 03</span>
+            <span class="carrot-preview">
+              <strong data-i18n-site="pf.project.3.title">简谟生物品牌矩阵与宠物食品市场竞争分析项目</strong>
+              <em data-i18n-site="pf.project.3.desc">拆解简谟生物多品牌矩阵、诚实一口主品牌定位、竞品格局与信任风险。</em>
+            </span>
+          </a>
+
+          <a class="carrot-plot plot-4" href="project-ngs.html" aria-label="Open NGS Laboratory Workflow Simulation project">
+            <span class="soil-lines"></span>
+            <span class="carrot">
+              <i class="leaf leaf-1"></i>
+              <i class="leaf leaf-2"></i>
+              <i class="leaf leaf-3"></i>
+              <i class="root"></i>
+            </span>
+            <span class="plot-tag">Project 04</span>
+            <span class="carrot-preview">
+              <strong data-i18n-site="pf.project.4.title">NGS 实验室流程仿真项目</strong>
+              <em data-i18n-site="pf.project.4.desc">使用离散事件仿真分析 NGS 实验室流程瓶颈，并测试周转时间优化方案。</em>
+            </span>
+          </a>
+        </div>
+
+        <div class="field-corner-note" data-i18n-site="pf.corner"><strong>Hover</strong> 看简介 · <strong>Click</strong> 进入详情页</div>
+      </div>
+
+      <span class="field-deco flower pf-1"></span>
+      <span class="field-deco flower pf-2"></span>
+      <span class="field-deco flower pf-3"></span>
+      <span class="field-deco tree pf-tree"><i></i></span>
+    </section>
+  </main>
+
+  <script>
+    const globalTranslations = {
+      zh: {
+        "home.welcome.p": "Welcome to",
+        "home.welcome.h1": "Xiaomin's Portfolio",
+        "home.mapHint.1": "🖱️ 点击小屋门进入 About Me",
+        "home.mapHint.2": "🌱 点击农田查看项目胡萝卜",
+        "home.mapHint.3": "🧰 点击工具棚查看技能与工具",
+        "home.who.title": "💻 我是谁 / Who I Am",
+        "home.who.p1": "我是 Xiaomin，拥有 Finance 与 Business Analytics 的学习背景。我对数据洞察、用户需求、AI工具、品牌表达和网页设计很感兴趣。我喜欢把复杂的信息整理成清晰、有逻辑、也有视觉记忆点的内容。",
+        "home.who.p2": "I enjoy using AI as a creative and analytical partner: from breaking down business problems, generating visual directions, structuring portfolio pages, to turning ideas into clean HTML/CSS outputs.",
+        "about.board": "About Me",
+        "about.hint1": "💻 点击电脑：查看个人介绍",
+        "about.hint2": "🖼️ 点击毕业照：查看毕业服兔兔",
+        "about.popup.title": "💻 我的个人介绍",
+        "about.step1.title": "背景经历",
+        "about.step1.text": "我拥有金融与商业分析的学习背景，对数据、商业洞察、用户需求和新兴技术都很感兴趣。过去几年在英国的学习经历，让我逐渐形成了更开放的视角，也更习惯从不同文化和行业中观察问题。",
+        "about.step2.title": "我的工作方式",
+        "about.step2.text": "我喜欢把复杂的信息整理成清晰的结构，也享受从一个想法出发，把它变成可落地的方案。无论是做商业分析、品牌页面、AI 应用案例，还是研究一个新的行业，我都希望自己是真的理解背后的逻辑和价值。",
+        "about.step3.title": "兴趣与观察",
+        "about.step3.text": "在生活中，我喜欢旅行、阅读和拼图，也持续关注动漫、网文和内容行业。这些兴趣让我保持好奇心，也训练我观察人与故事、产品和市场之间关系的能力。",
+        "about.core.title": "📚 核心优势 / Core Strengths",
+        "about.core1.title": "商业分析",
+        "about.core1.text": "能够将商业问题拆解为结构化分析，并形成清晰的建议。",
+        "about.core2.title": "AI 应用",
+        "about.core2.text": "长期使用 AI 工具进行创意构思、文案写作和视觉方向。",
+        "about.core3.title": "用户洞察",
+        "about.core3.text": "关注用户在真实服务场景中如何感知信任、共情、清晰度和价值。",
+        "about.core4.title": "沟通表达",
+        "about.core4.text": "能够把复杂概念转化为清楚、友好、有视觉叙事感的内容。",
+        "about.grad.title": "🎓 Graduation Bunny",
+        "skills.title": "技能与工具",
+        "skills.lead": "这个页面像一个动森感工具棚：每一组技能都是一件工具，代表我在分析、研究、AI创作、内容设计、商业运营和沟通表达中的能力。",
+        "projects.title": "Each carrot grows one project"
+      },
+      en: {
+        "home.welcome.p": "Welcome to",
+        "home.welcome.h1": "Xiaomin's Portfolio",
+        "home.mapHint.1": "🖱️ Click the cottage door to enter About Me",
+        "home.mapHint.2": "🌱 Click the field to view project carrots",
+        "home.mapHint.3": "🧰 Click the shed to view skills & tools",
+        "home.who.title": "💻 Who I Am",
+        "home.who.p1": "I am Xiaomin, with an academic background in Finance and Business Analytics. I am interested in data insight, user needs, AI tools, brand expression and web design. I enjoy turning complex information into clear, logical and visually memorable content.",
+        "home.who.p2": "I enjoy using AI as a creative and analytical partner: from breaking down business problems, generating visual directions, structuring portfolio pages, to turning ideas into clean HTML/CSS outputs.",
+        "about.board": "About Me",
+        "about.hint1": "💻 Click the computer: personal introduction",
+        "about.hint2": "🖼️ Click the graduation photo: graduation bunny",
+        "about.popup.title": "💻 Personal Introduction",
+        "about.step1.title": "Background",
+        "about.step1.text": "I have a background in Finance and Business Analytics, and I am interested in data, business insight, user needs and emerging technologies. My years of study in the UK helped me develop a more open perspective and become more used to observing problems across different cultures and industries.",
+        "about.step2.title": "How I Work",
+        "about.step2.text": "I like organizing complex information into clear structures, and I enjoy turning an idea into a practical solution. Whether I am working on business analysis, brand pages, AI application cases or researching a new industry, I want to truly understand the logic and value behind it.",
+        "about.step3.title": "Interests & Observation",
+        "about.step3.text": "In daily life, I enjoy travelling, reading and puzzles, and I also follow anime, web novels and content industries. These interests keep me curious and train my ability to observe relationships between people, stories, products and markets.",
+        "about.core.title": "📚 Core Strengths",
+        "about.core1.title": "Business Analysis",
+        "about.core1.text": "Able to break business problems into structured analysis and clear recommendations.",
+        "about.core2.title": "AI Application",
+        "about.core2.text": "Long-term use of AI tools for creative thinking, copywriting and visual direction.",
+        "about.core3.title": "User Insight",
+        "about.core3.text": "Focused on how users perceive trust, empathy, clarity and value in real service scenarios.",
+        "about.core4.title": "Communication",
+        "about.core4.text": "Able to turn complex concepts into clear, friendly and visually narrative content.",
+        "about.grad.title": "🎓 Graduation Bunny",
+        "skills.title": "Skills & Tools",
+        "skills.lead": "This page works like a cozy tool shed: each skill group is a tool that represents my abilities in analysis, research, AI creation, content design, business operations and communication.",
+        "projects.title": "Each carrot grows one project"
+      }
+    };
+
+    function applyGlobalLang(lang) {
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+      localStorage.setItem("portfolioLanguage", lang);
+      document.querySelectorAll("[data-i18n-global]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-global");
+        if (globalTranslations[lang] && globalTranslations[lang][key]) {
+          el.innerHTML = globalTranslations[lang][key];
+        }
+      });
+      document.querySelectorAll(".global-lang-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+    }
+
+    document.querySelectorAll(".global-lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => applyGlobalLang(btn.dataset.lang));
+    });
+
+    applyGlobalLang(localStorage.getItem("portfolioLanguage") || "zh");
+  </script>
+
+<script>
+(function () {
+  const siteTranslations = {
+  "zh": {
+    "lang.zh": "中文",
+    "lang.en": "EN",
+    "home.welcome.p": "Welcome to",
+    "home.welcome.h1": "Xiaomin's Portfolio",
+    "home.cottage.hover": "进入小屋 · About Me",
+    "home.mailbox.hover": "Contact Mailbox",
+    "home.resume": "📄 下载简历",
+    "home.email": "✉️ 给我发邮件",
+    "home.bunny.greeting": "Hi, I'm Xiaomin",
+    "home.who.hover.title": "Who am I",
+    "home.who.hover.text": "Quick intro about Xiaomin",
+    "home.who.board.title": "Who am I",
+    "home.who.board.sub": "Notice Board",
+    "home.field.title": "Project Fields",
+    "home.field.hover": "Enter Project Fields",
+    "home.shed.title": "Skills Shed",
+    "home.shed.hover.title": "Skills & Tools",
+    "home.shed.hover.text": "Data · Research · AI · Design · Operations · Communication",
+    "home.mapHint.1": "🖱️ 点击小屋门进入 About Me",
+    "home.mapHint.2": "🌱 点击农田查看项目胡萝卜",
+    "home.mapHint.3": "🧰 点击工具棚查看技能与工具",
+    "home.who.title": "💻 我是谁 / Who I Am",
+    "home.who.p1": "我是 Xiaomin，拥有 Finance 与 Business Analytics 的学习背景。我对数据洞察、用户需求、AI工具、品牌表达和网页设计很感兴趣。我喜欢把复杂的信息整理成清晰、有逻辑、也有视觉记忆点的内容。",
+    "home.who.p2": "I enjoy using AI as a creative and analytical partner: from breaking down business problems, generating visual directions, structuring portfolio pages, to turning ideas into clean HTML/CSS outputs.",
+    "home.tag.ba": "Business Analytics",
+    "home.tag.ai": "AI-assisted Design",
+    "home.tag.user": "User Insight",
+    "home.tag.story": "Data Storytelling",
+    "about.entering": "Entering the cottage...",
+    "about.board": "About Me",
+    "about.bookshelf.hover": "Hover / Click Core Strengths",
+    "about.sticky.title": "Notes",
+    "about.click.frame": "Click the frame",
+    "about.click.computer": "Click the computer",
+    "about.screen": "Hello!",
+    "about.hint1": "💻 点击电脑：查看个人介绍",
+    "about.hint2": "🖼️ 点击毕业照：查看毕业服兔兔",
+    "about.popup.title": "💻 我的个人介绍",
+    "about.step1.title": "背景经历",
+    "about.step1.text": "我拥有金融与商业分析的学习背景，对数据、商业洞察、用户需求和新兴技术都很感兴趣。过去几年在英国的学习经历，让我逐渐形成了更开放的视角，也更习惯从不同文化和行业中观察问题。",
+    "about.step2.title": "我的工作方式",
+    "about.step2.text": "我喜欢把复杂的信息整理成清晰的结构，也享受从一个想法出发，把它变成可落地的方案。无论是做商业分析、品牌页面、AI 应用案例，还是研究一个新的行业，我都希望自己是真的理解背后的逻辑和价值。",
+    "about.step3.title": "兴趣与观察",
+    "about.step3.text": "在生活中，我喜欢旅行、阅读和拼图，也持续关注动漫、网文和内容行业。这些兴趣让我保持好奇心，也训练我观察人与故事、产品和市场之间关系的能力。",
+    "about.core.title": "📚 核心优势 / Core Strengths",
+    "about.core1.title": "商业分析",
+    "about.core1.text": "能够将商业问题拆解为结构化分析，并形成清晰的建议。",
+    "about.core2.title": "AI 应用",
+    "about.core2.text": "长期使用 AI 工具进行创意构思、文案写作和视觉方向。",
+    "about.core3.title": "用户洞察",
+    "about.core3.text": "关注用户在真实服务场景中如何感知信任、共情、清晰度和价值。",
+    "about.core4.title": "沟通表达",
+    "about.core4.text": "能够把复杂概念转化为清楚、友好、有视觉叙事感的内容。",
+    "about.grad.title": "🎓 Graduation Bunny",
+    "about.grad.caption": "这张毕业照延续了网站里兔兔主角的风格，并把 University of Bristol 和 The University of Manchester 放进了同一个温暖的校园场景里。",
+    "skills.board": "Skills",
+    "skills.eyebrow": "Tool Shed · Skills & Tools",
+    "skills.title": "技能与工具",
+    "skills.lead": "这个页面像一个动森感工具棚：每一组技能都是一件工具，代表我在分析、研究、AI创作、内容设计、商业运营和沟通表达中的能力。",
+    "skills.data.title": "数据分析",
+    "skills.data.1": "R, Python, Excel, Microsoft Office",
+    "skills.data.2": "Regression Analysis",
+    "skills.data.3": "Marketing Analytics",
+    "skills.research.title": "研究能力",
+    "skills.research.1": "Qualitative Interviews",
+    "skills.research.2": "Thematic Analysis",
+    "skills.research.3": "User Insight",
+    "skills.research.4": "Market Research",
+    "skills.ai.title": "AI 与创作",
+    "skills.ai.1": "ChatGPT",
+    "skills.ai.2": "AI-assisted Writing",
+    "skills.ai.3": "AI Image Editing",
+    "skills.ai.4": "AI Website Generation",
+    "skills.design.title": "内容与设计",
+    "skills.design.1": "Canva",
+    "skills.design.2": "PowerPoint",
+    "skills.design.3": "Website Layout",
+    "skills.business.title": "商业与运营",
+    "skills.business.1": "Supplier Communication",
+    "skills.business.2": "Marketing Analysis",
+    "skills.business.3": "Operations Awareness",
+    "skills.comm.title": "沟通表达",
+    "skills.comm.1": "Writing Skills",
+    "skills.comm.2": "Project Storytelling",
+    "skills.comm.3": "Presentation Design",
+    "skills.comm.4": "Cross-cultural Communication",
+    "skills.note.title": "How I use these tools",
+    "skills.note.text": "我更关注工具背后的应用场景：用数据理解问题，用研究发现需求，用 AI 提高表达效率，再用设计和沟通把复杂内容变成清晰、可展示、可落地的作品。",
+    "pf.board": "Project Fields",
+    "pf.sign.p": "Pick a carrot",
+    "pf.sign.h1": "Each carrot grows one project",
+    "pf.project.1.title": "猫主粮品类视觉策略设计项目",
+    "pf.project.1.desc": "将价格带、目标人群、购买痛点和卖点优先级转化为 AI 辅助视觉方案。",
+    "pf.project.2.title": "Healthcare AI Response Research",
+    "pf.project.2.desc": "毕业论文项目：比较人工回复与 ChatGPT 回复在医疗差评中的感知差异。",
+    "pf.project.3.title": "简谟生物品牌矩阵与宠物食品市场竞争分析项目",
+    "pf.project.3.desc": "拆解简谟生物多品牌矩阵、诚实一口主品牌定位、竞品格局与信任风险。",
+    "pf.project.4.title": "NGS 实验室流程仿真项目",
+    "pf.project.4.desc": "使用离散事件仿真分析 NGS 实验室流程瓶颈，并测试周转时间优化方案。",
+    "pf.corner": "<strong>Hover</strong> 看简介 · <strong>Click</strong> 进入详情页",
+    "health.board": "Project",
+    "health.kicker": "Xiaomin's Project Carrot",
+    "health.title": "Healthcare AI Response Research",
+    "health.subtitle": "围绕医疗差评回复展开的毕业论文项目，比较人工回复与 ChatGPT 回复在同一场景下的用户感知差异。",
+    "health.brief.title": "Project Brief",
+    "health.brief": "项目研究英国医疗服务场景下，消费者如何看待人工撰写与 ChatGPT 生成的负面评论管理回复。研究关注共情、语气、可信度、语言线索和 AI 接受度。",
+    "health.role.title": "My Role",
+    "health.role": "我设计访谈问题、整理场景材料、进行半结构化访谈，并通过主题分析提炼关键发现。",
+    "health.output.title": "Final Output",
+    "health.output": "毕业论文研究框架、访谈分析、主题发现和对医疗服务回复策略的建议。",
+    "health.process.title": "Process",
+    "health.process.1": "确定医疗负面评论与管理回复的研究场景。",
+    "health.process.2": "设计人工回复与 AI 回复的盲测比较。",
+    "health.process.3": "围绕 empathy、tone、credibility、preference 进行编码。",
+    "health.process.4": "总结用户对 AI 辅助回复的接受条件。",
+    "health.insights.title": "Key Insights",
+    "health.insights.1": "AI 回复常被认为更温暖，但也容易被质疑模板化。",
+    "health.insights.2": "人工回复如果解释清楚原因和行动，会带来更强可信度。",
+    "health.insights.3": "医疗服务场景中，AI 更适合作为草稿工具，需要人工审核。",
+    "health.reflection.title": "Reflection",
+    "health.reflection": "这个项目体现了我将 AI 议题、用户感知和服务管理结合起来分析的能力，也展示了我对定性研究和用户洞察的兴趣。",
+    "health.back.field": "Back to Project Field",
+    "health.back.home": "Back to Farm Home"
+  },
+  "en": {
+    "lang.zh": "中文",
+    "lang.en": "EN",
+    "home.welcome.p": "Welcome to",
+    "home.welcome.h1": "Xiaomin's Portfolio",
+    "home.cottage.hover": "Enter the cottage · About Me",
+    "home.mailbox.hover": "Contact Mailbox",
+    "home.resume": "📄 Download Resume",
+    "home.email": "✉️ Email Me",
+    "home.bunny.greeting": "Hi, I'm Xiaomin",
+    "home.who.hover.title": "Who am I",
+    "home.who.hover.text": "Quick intro about Xiaomin",
+    "home.who.board.title": "Who am I",
+    "home.who.board.sub": "Notice Board",
+    "home.field.title": "Project Fields",
+    "home.field.hover": "Enter Project Fields",
+    "home.shed.title": "Skills Shed",
+    "home.shed.hover.title": "Skills & Tools",
+    "home.shed.hover.text": "Data · Research · AI · Design · Operations · Communication",
+    "home.mapHint.1": "🖱️ Click the cottage door to enter About Me",
+    "home.mapHint.2": "🌱 Click the field to view project carrots",
+    "home.mapHint.3": "🧰 Click the shed to view skills & tools",
+    "home.who.title": "💻 Who I Am",
+    "home.who.p1": "I am Xiaomin, with an academic background in Finance and Business Analytics. I am interested in data insight, user needs, AI tools, brand expression and web design. I enjoy turning complex information into clear, logical and visually memorable content.",
+    "home.who.p2": "I enjoy using AI as a creative and analytical partner: from breaking down business problems, generating visual directions, structuring portfolio pages, to turning ideas into clean HTML/CSS outputs.",
+    "home.tag.ba": "Business Analytics",
+    "home.tag.ai": "AI-assisted Design",
+    "home.tag.user": "User Insight",
+    "home.tag.story": "Data Storytelling",
+    "about.entering": "Entering the cottage...",
+    "about.board": "About Me",
+    "about.bookshelf.hover": "Hover / Click Core Strengths",
+    "about.sticky.title": "Notes",
+    "about.click.frame": "Click the frame",
+    "about.click.computer": "Click the computer",
+    "about.screen": "Hello!",
+    "about.hint1": "💻 Click the computer: personal introduction",
+    "about.hint2": "🖼️ Click the graduation photo: graduation bunny",
+    "about.popup.title": "💻 Personal Introduction",
+    "about.step1.title": "Background",
+    "about.step1.text": "I have a background in Finance and Business Analytics, and I am interested in data, business insight, user needs and emerging technologies. My years of study in the UK helped me develop a more open perspective and become more used to observing problems across different cultures and industries.",
+    "about.step2.title": "How I Work",
+    "about.step2.text": "I like organizing complex information into clear structures, and I enjoy turning an idea into a practical solution. Whether I am working on business analysis, brand pages, AI application cases or researching a new industry, I want to truly understand the logic and value behind it.",
+    "about.step3.title": "Interests & Observation",
+    "about.step3.text": "In daily life, I enjoy travelling, reading and puzzles, and I also follow anime, web novels and content industries. These interests keep me curious and train my ability to observe relationships between people, stories, products and markets.",
+    "about.core.title": "📚 Core Strengths",
+    "about.core1.title": "Business Analysis",
+    "about.core1.text": "Able to break business problems into structured analysis and clear recommendations.",
+    "about.core2.title": "AI Application",
+    "about.core2.text": "Long-term use of AI tools for creative thinking, copywriting and visual direction.",
+    "about.core3.title": "User Insight",
+    "about.core3.text": "Focused on how users perceive trust, empathy, clarity and value in real service scenarios.",
+    "about.core4.title": "Communication",
+    "about.core4.text": "Able to turn complex concepts into clear, friendly and visually narrative content.",
+    "about.grad.title": "🎓 Graduation Bunny",
+    "about.grad.caption": "This graduation photo keeps the same bunny character style as the website and places both the University of Bristol and The University of Manchester in one warm campus scene.",
+    "skills.board": "Skills",
+    "skills.eyebrow": "Tool Shed · Skills & Tools",
+    "skills.title": "Skills & Tools",
+    "skills.lead": "This page works like a cozy tool shed: each skill group is a tool that represents my abilities in analysis, research, AI creation, content design, business operations and communication.",
+    "skills.data.title": "Data Analysis",
+    "skills.data.1": "R, Python, Excel, Microsoft Office",
+    "skills.data.2": "Regression Analysis",
+    "skills.data.3": "Marketing Analytics",
+    "skills.research.title": "Research Skills",
+    "skills.research.1": "Qualitative Interviews",
+    "skills.research.2": "Thematic Analysis",
+    "skills.research.3": "User Insight",
+    "skills.research.4": "Market Research",
+    "skills.ai.title": "AI & Creation",
+    "skills.ai.1": "ChatGPT",
+    "skills.ai.2": "AI-assisted Writing",
+    "skills.ai.3": "AI Image Editing",
+    "skills.ai.4": "AI Website Generation",
+    "skills.design.title": "Content & Design",
+    "skills.design.1": "Canva",
+    "skills.design.2": "PowerPoint",
+    "skills.design.3": "Website Layout",
+    "skills.business.title": "Business & Operations",
+    "skills.business.1": "Supplier Communication",
+    "skills.business.2": "Marketing Analysis",
+    "skills.business.3": "Operations Awareness",
+    "skills.comm.title": "Communication",
+    "skills.comm.1": "Writing Skills",
+    "skills.comm.2": "Project Storytelling",
+    "skills.comm.3": "Presentation Design",
+    "skills.comm.4": "Cross-cultural Communication",
+    "skills.note.title": "How I use these tools",
+    "skills.note.text": "I care more about how tools are used in real scenarios: using data to understand problems, research to discover needs, AI to improve expression efficiency, and design plus communication to turn complex content into clear, presentable and practical work.",
+    "pf.board": "Project Fields",
+    "pf.sign.p": "Pick a carrot",
+    "pf.sign.h1": "Each carrot grows one project",
+    "pf.project.1.title": "Cat Food Visual Strategy",
+    "pf.project.1.desc": "Translating price tiers, target users, purchase concerns and selling-point priorities into AI-assisted visual concepts.",
+    "pf.project.2.title": "Healthcare AI Response Research",
+    "pf.project.2.desc": "A dissertation project comparing human-written and ChatGPT-generated responses to negative healthcare reviews.",
+    "pf.project.3.title": "Jianmo Bio Brand Matrix & Pet Food Market Analysis",
+    "pf.project.3.desc": "Analyzing Jianmo Bio’s multi-brand portfolio, Honest Bite’s core positioning, competitors and trust risks.",
+    "pf.project.4.title": "NGS Laboratory Workflow Simulation",
+    "pf.project.4.desc": "Using discrete-event simulation to identify bottlenecks in an NGS laboratory workflow and test turnaround-time improvements.",
+    "pf.corner": "<strong>Hover</strong> for preview · <strong>Click</strong> for details",
+    "health.board": "Project",
+    "health.kicker": "Xiaomin's Project Carrot",
+    "health.title": "Healthcare AI Response Research",
+    "health.subtitle": "A dissertation project comparing how people perceive human-written and ChatGPT-generated responses to negative healthcare reviews.",
+    "health.brief.title": "Project Brief",
+    "health.brief": "This project studies how consumers perceive human-written and ChatGPT-generated managerial responses to negative online reviews in UK healthcare. It focuses on empathy, tone, credibility, language cues and acceptance of AI use.",
+    "health.role.title": "My Role",
+    "health.role": "I designed interview questions, prepared response scenarios, conducted semi-structured interviews and used thematic analysis to develop key findings.",
+    "health.output.title": "Final Output",
+    "health.output": "A dissertation research framework, interview analysis, thematic findings and practical recommendations for healthcare service recovery responses.",
+    "health.process.title": "Process",
+    "health.process.1": "Defined the healthcare negative-review and managerial-response scenario.",
+    "health.process.2": "Designed a blind comparison between human-written and AI-generated responses.",
+    "health.process.3": "Coded themes around empathy, tone, credibility and preference.",
+    "health.process.4": "Summarized the conditions under which users accept AI-assisted responses.",
+    "health.insights.title": "Key Insights",
+    "health.insights.1": "AI responses were often perceived as warmer, but could also feel templated.",
+    "health.insights.2": "Human responses gained credibility when they explained reasons and concrete actions clearly.",
+    "health.insights.3": "In healthcare service recovery, AI is more suitable as a drafting tool with human review.",
+    "health.reflection.title": "Reflection",
+    "health.reflection": "This project demonstrates my ability to connect AI, user perception and service management, while also showing my interest in qualitative research and user insight.",
+    "health.back.field": "Back to Project Field",
+    "health.back.home": "Back to Farm Home"
+  }
+};
+
+  function translateByAttr(selector, lang, dictionary) {
+    if (!dictionary || !dictionary[lang]) return;
+    document.querySelectorAll(selector).forEach((el) => {
+      const key = el.getAttribute(selector.slice(1, -1).split('=')[0]);
+      if (key && Object.prototype.hasOwnProperty.call(dictionary[lang], key)) {
+        el.innerHTML = dictionary[lang][key];
+      }
+    });
+  }
+
+  function setActiveButtons(lang) {
+    document.querySelectorAll('.global-lang-btn, .cat-lang-btn, .case-lang-btn').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  window.setPortfolioLanguage = function(lang) {
+    lang = lang === 'en' ? 'en' : 'zh';
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    localStorage.setItem('portfolioLanguage', lang);
+
+    // 1) Unified site-level translations added for all pages.
+    document.querySelectorAll('[data-i18n-site]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-site');
+      if (siteTranslations[lang] && siteTranslations[lang][key]) el.innerHTML = siteTranslations[lang][key];
+    });
+
+    // 2) Older global translations that already existed on earlier pages.
+    try {
+      if (typeof globalTranslations !== 'undefined' && globalTranslations[lang]) {
+        document.querySelectorAll('[data-i18n-global]').forEach((el) => {
+          const key = el.getAttribute('data-i18n-global');
+          if (globalTranslations[lang][key]) el.innerHTML = globalTranslations[lang][key];
+        });
+      }
+    } catch (e) {}
+
+    // 3) Existing project-page translations, e.g. cat food / Jianmo / NGS pages.
+    try {
+      if (typeof translations !== 'undefined' && translations[lang]) {
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) el.innerHTML = translations[lang][key];
+        });
+      }
+    } catch (e) {}
+
+    setActiveButtons(lang);
+  };
+
+  document.querySelectorAll('.global-lang-btn, .cat-lang-btn, .case-lang-btn').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.setPortfolioLanguage(btn.dataset.lang);
+    });
+  });
+
+  window.setPortfolioLanguage(localStorage.getItem('portfolioLanguage') || 'zh');
+})();
+</script>
+
+</body>
+</html>
